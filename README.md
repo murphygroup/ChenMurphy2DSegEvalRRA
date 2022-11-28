@@ -1,4 +1,4 @@
-# Reproducible Research Archive of manuscript Evaluation of cell segmentation methods without reference segmentations
+# Reproducible Research Archive
 
 Haoran Chen and Robert F. Murphy\
 Carnegie Mellon University\
