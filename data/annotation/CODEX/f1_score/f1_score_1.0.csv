@@ -1,0 +1,61 @@
+,f1_score,expert,method,tile,jaccard_thre,TP,FP,FN
+0,0.0,expert1,DeepCell 0.12.3 mem,tile1,1.0,0,2625,3431
+1,0.0,expert1,DeepCell 0.12.3 cyto,tile1,1.0,0,2596,3431
+2,0.0,expert1,DeepCell 0.9.0 mem,tile1,1.0,0,2745,3431
+3,0.0,expert1,DeepCell 0.9.0 cyto,tile1,1.0,0,2718,3431
+4,0.0,expert1,DeepCell 0.6.0 mem,tile1,1.0,0,2357,3431
+5,0.0,expert1,DeepCell 0.6.0 cyto,tile1,1.0,0,2284,3431
+6,0.0,expert1,Cellpose 2.1.0,tile1,1.0,0,2892,3431
+7,0.0,expert1,Cellpose 0.6.1,tile1,1.0,0,2850,3431
+8,0.0,expert1,Cellpose 0.0.3.1,tile1,1.0,0,2694,3431
+9,0.0,expert1,CellProfiler,tile1,1.0,0,1023,3431
+10,0.0,expert1,CellX,tile1,1.0,0,103,3431
+11,0.0,expert1,AICS(classic),tile1,1.0,0,1267,3431
+12,0.0,expert1,Cellsegm,tile1,1.0,0,23,3431
+13,0.0,expert1,Voronoi,tile1,1.0,0,683,3431
+14,0.0,expert1,Expert2,tile1,1.0,0,2094,3431
+15,0.0,expert2,DeepCell 0.12.3 mem,tile1,1.0,0,2625,2094
+16,0.0,expert2,DeepCell 0.12.3 cyto,tile1,1.0,0,2596,2094
+17,0.0,expert2,DeepCell 0.9.0 mem,tile1,1.0,0,2745,2094
+18,0.0,expert2,DeepCell 0.9.0 cyto,tile1,1.0,0,2718,2094
+19,0.0,expert2,DeepCell 0.6.0 mem,tile1,1.0,0,2357,2094
+20,0.0,expert2,DeepCell 0.6.0 cyto,tile1,1.0,0,2284,2094
+21,0.0,expert2,Cellpose 2.1.0,tile1,1.0,0,2892,2094
+22,0.0,expert2,Cellpose 0.6.1,tile1,1.0,0,2850,2094
+23,0.0,expert2,Cellpose 0.0.3.1,tile1,1.0,0,2694,2094
+24,0.0,expert2,CellProfiler,tile1,1.0,0,1023,2094
+25,0.0,expert2,CellX,tile1,1.0,0,103,2094
+26,0.0,expert2,AICS(classic),tile1,1.0,0,1267,2094
+27,0.0,expert2,Cellsegm,tile1,1.0,0,23,2094
+28,0.0,expert2,Voronoi,tile1,1.0,0,683,2094
+29,0.0,expert2,Expert1,tile1,1.0,0,3431,2094
+30,0.0,expert1,DeepCell 0.12.3 mem,tile2,1.0,0,2432,3059
+31,0.0,expert1,DeepCell 0.12.3 cyto,tile2,1.0,0,2477,3059
+32,0.0,expert1,DeepCell 0.9.0 mem,tile2,1.0,0,2507,3059
+33,0.0,expert1,DeepCell 0.9.0 cyto,tile2,1.0,0,2574,3059
+34,0.0,expert1,DeepCell 0.6.0 mem,tile2,1.0,0,2193,3059
+35,0.0,expert1,DeepCell 0.6.0 cyto,tile2,1.0,0,2143,3059
+36,0.0,expert1,Cellpose 2.1.0,tile2,1.0,0,2648,3059
+37,0.0,expert1,Cellpose 0.6.1,tile2,1.0,0,2632,3059
+38,0.0,expert1,Cellpose 0.0.3.1,tile2,1.0,0,2485,3059
+39,0.0,expert1,CellProfiler,tile2,1.0,0,997,3059
+40,0.0,expert1,CellX,tile2,1.0,0,75,3059
+41,0.0,expert1,AICS(classic),tile2,1.0,0,1494,3059
+42,0.0,expert1,Cellsegm,tile2,1.0,0,17,3059
+43,0.0,expert1,Voronoi,tile2,1.0,0,668,3059
+44,0.0,expert1,Expert2,tile2,1.0,0,1938,3059
+45,0.0,expert2,DeepCell 0.12.3 mem,tile2,1.0,0,2432,1938
+46,0.0,expert2,DeepCell 0.12.3 cyto,tile2,1.0,0,2477,1938
+47,0.0,expert2,DeepCell 0.9.0 mem,tile2,1.0,0,2507,1938
+48,0.0,expert2,DeepCell 0.9.0 cyto,tile2,1.0,0,2574,1938
+49,0.0,expert2,DeepCell 0.6.0 mem,tile2,1.0,0,2193,1938
+50,0.0,expert2,DeepCell 0.6.0 cyto,tile2,1.0,0,2143,1938
+51,0.0,expert2,Cellpose 2.1.0,tile2,1.0,0,2648,1938
+52,0.0,expert2,Cellpose 0.6.1,tile2,1.0,0,2632,1938
+53,0.0,expert2,Cellpose 0.0.3.1,tile2,1.0,0,2485,1938
+54,0.0,expert2,CellProfiler,tile2,1.0,0,997,1938
+55,0.0,expert2,CellX,tile2,1.0,0,75,1938
+56,0.0,expert2,AICS(classic),tile2,1.0,0,1494,1938
+57,0.0,expert2,Cellsegm,tile2,1.0,0,17,1938
+58,0.0,expert2,Voronoi,tile2,1.0,0,668,1938
+59,0.0,expert2,Expert1,tile2,1.0,0,3059,1938
