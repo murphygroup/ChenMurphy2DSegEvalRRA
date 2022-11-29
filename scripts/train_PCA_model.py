@@ -133,7 +133,6 @@ def visualization_loadings(data, dir):
 
 
 if __name__ == '__main__':
-	
 	compartment = sys.argv[2]
 	# print(sys.argv[2])
 	if sys.argv[1] == 'merge':
@@ -184,7 +183,7 @@ if __name__ == '__main__':
 	features_3D_all_modalities = {}
 	features_2D_stack_pieces = []
 	
-	file_dir = os.path.dirname(os.getcwd())
+	file_dir = os.getcwd()
 	for noise in noise_type:
 		data_dir = join(file_dir, 'data', 'metrics', noise)
 		features_all[noise] = {}
@@ -209,14 +208,7 @@ if __name__ == '__main__':
 			# features_3D[:, 23, :] = 0
 			# features_3D[:, 22, :] = 0
 			# print(features_3D.shape)
-			if modality == 'CODEX':
-				test = pickle.load(bz2.BZ2File(join(feature_dir, 'feature_3D.pickle'), 'r'))
-				idx = 0
-				test1 = test[idx, 0]
-				# test2 = test[idx, 10]
-				# print(test.shape)
-				# print(test[idx, 0])
-				# print(test[idx, 10])
+
 			features_all[noise][modality] = {}
 			features_all[noise][modality]['data_3D'] = features_3D
 			features_all[noise][modality]['data_2D'] = get_stack_features(features_3D)
@@ -231,10 +223,7 @@ if __name__ == '__main__':
 		os.makedirs(output_dir)
 	features_2D_stack_PCA, PCA_model, ss_model = get_PCA_features(features_2D_stack, output_dir)
 	
-	test1 = np.expand_dims(test1, 0)
-	print(PCA_model.transform(ss_model.transform(test1)))
-	# test2 = np.expand_dims(test2, 0)
-	# print(PCA_model.transform(ss_model.transform(test2)))
+
 	start_index = 0
 	for noise in noise_type:
 		for modality in modalities:
@@ -403,7 +392,7 @@ if __name__ == '__main__':
 							
 							features_2D_stack_PCA_modality_method_noise
 						))
-					print(features_2D_stack_PCA_all_modalities_method_noise.shape)
+					# print(features_2D_stack_PCA_all_modalities_method_noise.shape)
 					if noise_level == 0:
 						pca_combined.append(
 							visualization_pc_all_img(features_2D_stack_PCA_all_modalities_method_noise))

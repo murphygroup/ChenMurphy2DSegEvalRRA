@@ -14,8 +14,7 @@ if __name__ == '__main__':
 	tissue_type = 'all_tissues'
 	compartment = 'concatenated_compartments'
 
-	file_dir = os.path.dirname(os.getcwd())
-	print(os.getcwd())
+	file_dir = os.getcwd()
 	output_dir = join(file_dir, 'data', 'output')
 	pca_model = pickle.load(open(join(output_dir, 'pca.pickle'), 'rb'))
 	ss = pca_model[0]

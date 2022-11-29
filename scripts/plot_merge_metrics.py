@@ -8,17 +8,21 @@ import numpy as np
 import glob
 
 if __name__ == '__main__':
+
+	file_dir = os.getcwd()
+	data_dir = join(file_dir, 'data', 'intermediate', 'manuscript_v28_underseg', 'CODEX')
+
 	# merged_list = ['DeepCell 0.12.3 mem 95% after merged', 'DeepCell 0.12.3 mem 90% after merged', 'DeepCell 0.12.3 mem 75% after merged', 'DeepCell 0.12.3 mem 60% after merged']
-	mask_dir_list = sorted(glob.glob('/Volumes/Extreme/segmentation/CODEX/HBM**', recursive=True))
+	mask_dir_list = sorted(glob.glob(join(data_dir, 'HBM**'), recursive=True))
 	quality_score_list_pieces = []
 	metric_abre = ['NC', 'FFC', '1-FBC', 'FCF', '1/(ln(CSSD)+1)', 'FMCN', '1/(ACVF+1)', 'FPCF',
 	               '1/(ACVC_NUC+1)', 'FPCC_NUC', 'AS_NUC',
 	               '1/(ACVC_CEN+1)', 'FPCC_CEN', 'AS_CEN']
 	metric_all = []
 	for mask_dir in mask_dir_list:
-		if mask_dir == '/Volumes/Extreme/segmentation/CODEX/HBM988.SNDW.698':
+		if mask_dir == join(data_dir, 'HBM988.SNDW.698'):
 			mask_dir = join(mask_dir, 'R003_X004_Y004', 'random_gaussian_0', 'merged_fraction_mask')
-		elif mask_dir == '/Volumes/Extreme/segmentation/CODEX/HBM433.MQRQ.278':
+		elif mask_dir == join(data_dir, 'HBM433.MQRQ.278'):
 			mask_dir = join(mask_dir, 'R001_X006_Y008', 'random_gaussian_0', 'merged_fraction_mask')
 		else:
 			mask_dir = join(mask_dir, 'R001_X004_Y004', 'random_gaussian_0', 'merged_fraction_mask')
@@ -61,7 +65,7 @@ if __name__ == '__main__':
 	ax.set_xticks(x + width + width/2)
 	ax.set_xticklabels(metric_abre, rotation = 45, rotation_mode='anchor', ha='right', fontsize=9)
 	ax.legend()
-	fig.savefig('/Users/hrchen/Downloads/segmentation_RRA/figures/merged_metrics.png', dpi=500, bbox_inches='tight')
+	fig.savefig(join(file_dir, 'figures', 'merged_metrics.png'), dpi=500, bbox_inches='tight')
 	plt.clf()
 	# plt.show()
 	# plt.close()

@@ -9,7 +9,7 @@ from matplotlib import gridspec
 import matplotlib.path as mpath
 
 if __name__ == '__main__':
-	file_dir = os.path.dirname(os.getcwd())
+	file_dir = os.getcwd()
 	
 	method_list = ['deepcell_membrane-0.12.3', 'deepcell_cytoplasm-0.12.3', 'deepcell_membrane_new',
 	               'deepcell_cytoplasm_new', 'deepcell_membrane', 'deepcell_cytoplasm', 'cellpose-2.1.0',

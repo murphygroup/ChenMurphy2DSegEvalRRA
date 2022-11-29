@@ -34,15 +34,14 @@ def get_PCA_features(features, dir):
 		for n_com in range(2):
 			if np.sum(pca.components_.T[:, n_com]) < 0:
 				pca.components_.T[:, n_com] = -pca.components_.T[:, n_com]
-		print(pca.components_.T)
-		print(pca.explained_variance_ratio_)
+		# print(pca.components_.T)
+		# print(pca.explained_variance_ratio_)
 		pickle.dump([ss, pca], open(join(dir, 'pca_10_metrics.pickle'), "wb"))
 
 
 
 
 if __name__ == '__main__':
-	
 	compartment = sys.argv[2]
 	# print(sys.argv[2])
 	if sys.argv[1] == 'merge':
@@ -92,7 +91,7 @@ if __name__ == '__main__':
 	features_3D_all_modalities = {}
 	features_2D_stack_pieces = []
 	
-	file_dir = os.path.dirname(os.getcwd())
+	file_dir = os.getcwd()
 
 	for noise in noise_type:
 		data_dir = join(file_dir, 'data', 'metrics', noise)
@@ -111,7 +110,7 @@ if __name__ == '__main__':
 			
 	features_2D_stack = np.vstack(features_2D_stack_pieces)
 	features_2D_stack = np.delete(features_2D_stack, 5, axis=-1)
-	print(features_2D_stack.shape)
+	# print(features_2D_stack.shape)
 	output_dir = join(file_dir, 'data', 'output')
 	if not os.path.exists(output_dir):
 		os.makedirs(output_dir)

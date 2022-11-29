@@ -18,7 +18,7 @@ import matplotlib.path as mpath
 
 
 if __name__ == '__main__':
-	file_dir = os.path.dirname(os.getcwd())
+	file_dir = os.getcwd()
 	data_dir = join(file_dir, 'data', 'annotation', 'CODEX', 'HBM279.TQRS.775')
 	output_dir = join(file_dir, 'data', 'annotation', 'CODEX')
 	tile_list = ['R001_X003_Y004', 'R001_X004_Y003']
@@ -60,8 +60,8 @@ if __name__ == '__main__':
 	#
 	# 		print(tile, expert, seg_score_r_current)
 
-	seg_score_dataframe_tile1 = seg_score_dataframe.loc[(seg_score_dataframe['tile'] == 'tile1') & (seg_score_dataframe['expert'] == 'expert2')]
-	seg_score_dataframe_tile2 = seg_score_dataframe.loc[(seg_score_dataframe['tile'] == 'tile2') & (seg_score_dataframe['expert'] == 'expert2')]
+	seg_score_dataframe_tile1 = seg_score_dataframe.loc[(seg_score_dataframe['tile'] == 'tile1')]
+	seg_score_dataframe_tile2 = seg_score_dataframe.loc[(seg_score_dataframe['tile'] == 'tile2')]
 	seg_score_r1 = pearsonr(seg_score_dataframe_tile1['seg_score'], seg_score_dataframe_tile2['quality_score'])[0]
 	seg_score_r2 = pearsonr(seg_score_dataframe_tile1['seg_score'], seg_score_dataframe_tile2['quality_score'])[0]
 
@@ -120,8 +120,8 @@ if __name__ == '__main__':
 	f1_score_dataframe['quality_score'] = quality_score_list
 	# print(pearsonr(f1_score_dataframe['f1_score'], f1_score_dataframe['quality_score'])[0])
 	
-	f1_score_dataframe_tile1 = f1_score_dataframe.loc[(f1_score_dataframe['tile'] == 'tile1') & (f1_score_dataframe['expert'] == 'expert2')]
-	f1_score_dataframe_tile2 = f1_score_dataframe.loc[(f1_score_dataframe['tile'] == 'tile2') & (f1_score_dataframe['expert'] == 'expert2')]
+	f1_score_dataframe_tile1 = f1_score_dataframe.loc[(f1_score_dataframe['tile'] == 'tile1')]
+	f1_score_dataframe_tile2 = f1_score_dataframe.loc[(f1_score_dataframe['tile'] == 'tile2')]
 	f1_score_r1 = pearsonr(f1_score_dataframe_tile1['f1_score'], f1_score_dataframe_tile1['quality_score'])[0]
 	f1_score_r2 = pearsonr(f1_score_dataframe_tile2['f1_score'], f1_score_dataframe_tile2['quality_score'])[0]
 
@@ -199,8 +199,8 @@ if __name__ == '__main__':
 		quality_score_list.append(metrics['QualityScore'])
 	PRAUC_score_dataframe['quality_score'] = quality_score_list
 	
-	PRAUC_score_dataframe_tile1 = PRAUC_score_dataframe.loc[(PRAUC_score_dataframe['tile'] == 'tile1') & (PRAUC_score_dataframe['expert'] == 'expert2')]
-	PRAUC_score_dataframe_tile2 = PRAUC_score_dataframe.loc[(PRAUC_score_dataframe['tile'] == 'tile2') & (PRAUC_score_dataframe['expert'] == 'expert2')]
+	PRAUC_score_dataframe_tile1 = PRAUC_score_dataframe.loc[(PRAUC_score_dataframe['tile'] == 'tile1')]
+	PRAUC_score_dataframe_tile2 = PRAUC_score_dataframe.loc[(PRAUC_score_dataframe['tile'] == 'tile2')]
 	PRAUC_score_r1 = pearsonr(PRAUC_score_dataframe_tile1['PRAUC'], PRAUC_score_dataframe_tile1['quality_score'])[0]
 	PRAUC_score_r2 = pearsonr(PRAUC_score_dataframe_tile2['PRAUC'], PRAUC_score_dataframe_tile2['quality_score'])[0]
 
