@@ -1,20 +1,19 @@
-# Fig 1, Fig 3, Fig 4, Sup Fig 3-13
-bash run_metric_calculation.sh
-bash run_metric_calculation_tissues_modalities.sh
-bash run_metric_calculation_concat.sh
-bash run_train_PCA_model.sh
+dir=$(pwd)
+
+# Fig 1, Fig 3, Fig 4
+bash $dir/scripts/run_metric_finalization.sh
+bash $dir/scripts/run_metric_finalization_concat.sh
+bash $dir/scripts/run_train_PCA_model.sh
 # Fig 2
-python hetero_metrics.py
+python $dir/scripts/hetero_metrics.py
 # Fig 5
-bash run_train_PCA_model_10_metrics.sh
-python annotation_eval.py
+bash $dir/scripts/run_train_PCA_model_10_metrics.sh
+python $dir/scripts/annotation_eval.py
 # Fig 6
-python benchmark_corr.py
+python $dir/scripts/benchmark_corr_plot.py
 # Fig 7
-python run_evaluation_merged.py
-python run_evaluation_repaired.py
-python run_evaluation_shifted.py
-python plot_merge_metrics.py
+python $dir/scripts/plot_underseg_eval.py
+python $dir/scripts/plot_merge_metrics.py
 # Fig 8
-python pairwise_metrics_vis.py
-python pairwise_metrics_vis_single.py
+python $dir/scripts/pairwise_metrics_vis.py
+python $dir/scripts/pairwise_metrics_vis_single.py
