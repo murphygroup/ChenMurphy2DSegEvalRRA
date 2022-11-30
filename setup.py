@@ -28,7 +28,7 @@ SOFTWARE.
 """)
 
 setup(
-	name="CellSegmentationEvaluator",
+	name="RRA",
 	version='1.0',
 	description='Evaluation of cell segmentation methods without reference segmentations',
 	url='https://github.com/murphygroup/CellSegmentationEvaluator',
